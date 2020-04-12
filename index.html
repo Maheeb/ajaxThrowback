@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX Throwback</title>
+</head>
+<body>
+<button id="button">click me</button>
+<br><br>
+<div id="text"></div>
+<script type="text/javascript">
+
+    document.getElementById('button').addEventListener("click", loadText);
+
+
+// var xhr = new XMLHttpRequest();
+
+
+    function loadText() {
+            var xhr = new XMLHttpRequest();
+         //    // console.log(xhr);
+         xhr.open('GET', 'sample_2.txt', true);
+
+        xhr.onload =function () {
+            if (this.status==200){
+
+                document.getElementById('text').innerHTML=this.responseText;
+
+            }
+            else if(this.status = 404){
+
+                document.getElementById('text').innerHTML= "Not found";
+            }
+
+
+
+        }
+
+
+        xhr.send();
+        }
+
+
+
+</script>
+
+</body>
+</html>
