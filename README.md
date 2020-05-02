@@ -1,4 +1,4 @@
 ## About this project
 
-I am learnig the essential functionality of ajax through doing this prject.
+I am learnig the essential functionality of ajax through doing this prject. :)
 
